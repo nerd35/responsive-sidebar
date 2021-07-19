@@ -1,0 +1,187 @@
+.sidebar-container {
+  position: fixed;
+  background-color: #000;
+  width: 300px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  transition: width 0.2s ease-in;
+}
+.sidebar-container.inactive {
+  width: 80px;
+}
+.sidebar-container .top-section {
+  position: relative;
+}
+.sidebar-container .top-section .logo {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 20px;
+  display: inline-block;
+}
+.sidebar-container .top-section .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.sidebar-container .top-section .toggle-menu-btn {
+  color: #ccc;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.sidebar-container.inactive .top-section .toggle-menu-btn {
+  right: -50px;
+}
+.sidebar-container .search-controller {
+  color: #333;
+  position: relative;
+}
+
+.sidebar-container .search-controller .search-btn {
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  color: #666;
+}
+.sidebar-container .search-controller input[type="text"] {
+  border: 0;
+  outline: none;
+  width: 100%;
+  height: 35px;
+  background: #333;
+  border-radius: 5px;
+  display: block;
+  margin: 20px 0;
+  box-sizing: border-box;
+  padding-left: 40px;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  border-radius: 1px;
+  background: #333;
+}
+.sidebar-container .sidebar-main-menu .sidebar-menu-item {
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  font-weight: 800;
+  cursor: pointer;
+}
+.sidebar-container .sidebar-main-menu .sidebar-menu-item.active {
+  background-color: #666;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar-container .sidebar-main-menu .sidebar-menu-item span {
+  position: absolute;
+  display: inline-block;
+  line-height: 40px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+.sidebar-container.sidebar-container.inactive
+  .sidebar-main-menu
+  .sidebar-menu-item
+  span {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+}
+
+.sidebar-container .sidebar-main-menu {
+  margin: 5px 0;
+}
+.sidebar-container .sidebar-main-menu .sidebar-sub-menu {
+  color: #333;
+  margin-left: 20px;
+  border-left: 1px solid #666;
+  box-sizing: border-box;
+  padding-left: 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .2s ease-in;
+}
+.sidebar-container .sidebar-main-menu .sidebar-sub-menu.active{
+    max-height: 200px;
+    
+}
+.sidebar-container .sidebar-main-menu .sidebar-sub-menu a.active{
+  background: #666;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+
+.sidebar-container .sidebar-main-menu .sidebar-sub-menu a {
+  display: block;
+  margin: 5px 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  box-sizing: border-box;
+  padding: 5px 5px;
+}
+
+.sidebar-container .sidebar-main-menu .sidebar-menu-item .sidebar-menu-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.sidebar-footer {
+  width: 100%;
+  background: #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.sidebar-footer .avatar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+}
+.sidebar-footer .avatar img {
+  max-width: 100%;
+}
+.sidebar-container.sidebar-container.inactive .sidebar-footer .user-info {
+    opacity: 1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.sidebar-footer .user-info {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  position: absolute;
+  opacity: 1;
+  transition: opacity .2s ease-in;
+}
+.sidebar-footer .user-info h5 {
+  font-size: 15px;
+}
+.sidebar-footer .user-info p {
+  font-size: 12px;
+}
